@@ -8,6 +8,9 @@ class TaxesController < ApplicationController
   	@tax = Tax.new
   end
 
+  def start
+  end
+
   def show
     tax = Tax.find(params[:id])
     tax.destroy

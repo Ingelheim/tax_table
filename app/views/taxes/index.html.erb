@@ -1,12 +1,15 @@
+<h2 style="text-align: center; text-decoration: underline; margin: 2em 0 2em 0;">Verpflegungsmehraufwendungspauschalen</h2>
+<h4 style="text-align: center; margin: 0 0 2em 0;"> Heimatadresse (HA): <br>Anne Mühlmeier, Fehrbelliner Str. 47, 10119 Berlin </h4>
 
-<table>
+
+<table class="table">
 	<tr>
-		<td>HA verlassen</td>
-		<td>Rueckkehr</td>
-		<td>Tage</td>
-		<td>Stunden</td>
-		<td>Bemerkung</td>
-		<td>Loeschen</td>
+		<td><strong>HA verlassen</strong></td>
+		<td><strong>Rückkehr</strong></td>
+		<td><strong>Tage</strong></td>
+		<td><strong>Stunden</strong></td>
+		<td><strong>Bemerkung</strong></td>
+		<td id="loeschen"><strong>Löschen</strong></td>
 	</tr>
 	<% @taxes.each do |tax| %>
 	<tr>
@@ -15,9 +18,9 @@
 		<td><%= tax.days %></td>
 		<td><%= tax.hours %></td>
 		<td><%= tax.comment %></td>
-		<td><%= link_to 'Loeschen', tax_path(tax), :method => :delete %></td>
+		<td><%= link_to 'Löschen', tax_path(tax), :method => :delete %></td>
 	</tr>
 	<% end %>
 </table>
 
-<%= link_to "Neuer Eintrag", new_tax_path%>
+<%= link_to "Neuer Eintrag", new_tax_path, class: "button_new"%>
