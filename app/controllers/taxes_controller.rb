@@ -8,7 +8,6 @@ class TaxesController < ApplicationController
   	@tax = Tax.new
   end
 
-
   def create
   	tax = params[:tax]
   	left_date = DateTime.new(tax["left(1i)"].to_i, tax["left(2i)"].to_i, tax["left(3i)"].to_i, tax["left(4i)"].to_i, tax["left(5i)"].to_i)
