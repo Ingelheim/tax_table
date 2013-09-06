@@ -15,8 +15,7 @@
 		<td><%= tax.days %></td>
 		<td><%= tax.hours %></td>
 		<td><%= tax.comment %></td>
-		<td><%= link_to 'Loeschen', tax_path(tax),
-            :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to 'Loeschen', tax_path(tax), :method => :delete %></td>
 	</tr>
 	<% end %>
 </table>
