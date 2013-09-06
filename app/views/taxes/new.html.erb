@@ -1,0 +1,11 @@
+NEUER EINTRAG
+
+<%= form_for @tax do |f| %>
+ <p><%= f.label(:left, "HA verlassen") %>
+ <%= f.datetime_select(:left) %></p>
+ <p><%= f.label(:return, "Rueckkehr") %>
+ <%= f.datetime_select(:return) %></p>
+ <p><%= f.label(:comment, "Bemerkung") %>
+ 	<%= f.text_field :comment, required: true %></p>
+ 	<%= f.submit("Speichern") %>
+ <% end %>
